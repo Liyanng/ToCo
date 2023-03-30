@@ -65,7 +65,7 @@ To generate VOC style segmentation labels for COCO dataset, you could use the sc
 I used docker to build the enviroment.
 ``` bash 
 ## build docker
-docker bulid -t toco --network=host -< Dockerfile
+docker build -t toco --network=host -< Dockerfile
 
 ## activate docker
 docker run -it --gpus all --network=host --ipc=host -v $CODE_PATH:/workspace/TOCO -v /$VOC_PATH:/workspace/VOCdevkit -v $COCO_ANNO_PATH:/workspace/MSCOCO -v $COCO_IMG_PATH:/workspace/coco2014 toco:latest /bin/bash
